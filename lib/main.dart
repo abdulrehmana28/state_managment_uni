@@ -164,7 +164,7 @@ class _RatingBoxState extends State<RatingBox> {
 
   @override
   Widget build(BuildContext context) {
-    double size = 15;
+    double size = 25;
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -222,7 +222,10 @@ class ProductBox extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Image.asset("assets/${item.image}"),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset("assets/${item.image}"),
+            ),
             Expanded(
               child: Container(
                 padding: const EdgeInsets.all(0),
